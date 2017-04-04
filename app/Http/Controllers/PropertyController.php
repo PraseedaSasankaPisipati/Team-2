@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Property;
+use DB;
+use Excel;
 
 class PropertyController extends Controller
 {
@@ -56,5 +58,18 @@ class PropertyController extends Controller
         Property::find($id)->delete();
         return redirect('properties');
     }
+
+	
+	public function downloadExcel($type)
+	{
+		$data = Property::get()->toArray();
+		date_default_timezone_set("America/Chicago");
+		return Excel::create('Properties -' . date("Y-m-d h:i:sa"), function($excel) use ($data) {
+			$excel->sheet('mySheet', function($sheet) use ($data)
+	        {
+				$sheet->fromArray($data);
+	        });
+		})->download($type);
+	}
 	
 }

@@ -33,4 +33,5 @@ Route::get('downloadExcel/workorders/{type}', 'WorkorderController@downloadExcel
 Route::get('downloadExcel/complaints/{type}', 'ComplaintController@downloadExcel');
 Route::get('downloadExcel/buildings/{type}', 'BuildingController@downloadExcel');
 Route::get('downloadExcel/workers/{type}', 'WorkerController@downloadExcel');
+Route::get('downloadExcel/properties/{type}', 'PropertyController@downloadExcel');
 

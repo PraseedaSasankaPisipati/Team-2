@@ -7,7 +7,7 @@
 	@if (Auth::user()->role!=='pman')
     <td><a href="{{url('/properties/create')}}" class="btn btn-success">Add Property</a></td>
     @endif
-	<td style="padding:0 10px 0 10px;"><a href="{{ URL::to('downloadExcel/xls') }}"><button class="btn btn-success">Download Excel</button></a></td></tr></table>
+	<td style="padding:0 10px 0 10px;"><a href="{{ URL::to('downloadExcel/properties/xls') }}"><button class="btn btn-success">Download Excel</button></a></td></tr></table>
     <hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>
