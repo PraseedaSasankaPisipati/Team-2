@@ -4,10 +4,9 @@
 @if (Auth::user()->role!=='pman')
    	<table>
     <tr>
-	
 	<td><a href="{{url('/complaints/create')}}" class="btn btn-success">Create Complaint</a> </td>
 @endif
-	<td style="padding:0 1000px 0 1000px;"><a href="{{ URL::to('downloadExcel/complaints/xls') }}"><button class="btn btn-success">Download Excel</button></a> </td>
+	<td style="padding:0 875px 0 875px;"><a href="{{ URL::to('downloadExcel/complaints/xls') }}"><button class="btn btn-success">Download Excel</button></a> </td>
 	</tr></table>
 	<hr>
     <table class="table table-striped table-bordered table-hover">
