@@ -29,5 +29,8 @@ Route::resource('propertymanagers','PropertymanagerController');
 Route::auth();
 Route::get('/home', 'HomeController@index');
 
-Route::get('downloadExcel/{type}', 'WorkorderController@downloadExcel');
-Route::get('downloadExcel', 'ComplaintController@downloadExcel');
+Route::get('downloadExcel/workorders/{type}', 'WorkorderController@downloadExcel');
+Route::get('downloadExcel/complaints/{type}', 'ComplaintController@downloadExcel');
+Route::get('downloadExcel/buildings/{type}', 'BuildingController@downloadExcel');
+Route::get('downloadExcel/workers/{type}', 'WorkerController@downloadExcel');
+

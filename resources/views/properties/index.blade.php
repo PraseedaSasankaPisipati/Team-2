@@ -1,11 +1,13 @@
 @extends('app')
 @section('content')
 
-    <h1>View Properties</h1>
+    <h1>Property Details</h1>
 	<table>
 	<tr>
+	@if (Auth::user()->role!=='pman')
     <td><a href="{{url('/properties/create')}}" class="btn btn-success">Add Property</a></td>
-	<td style="padding:0 875px 0 875px;"><a href="{{ URL::to('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel</button></a></td></tr></table>
+    @endif
+	<td style="padding:0 10px 0 10px;"><a href="{{ URL::to('downloadExcel/xls') }}"><button class="btn btn-success">Download Excel</button></a></td></tr></table>
     <hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>

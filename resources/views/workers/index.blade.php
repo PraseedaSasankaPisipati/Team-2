@@ -4,7 +4,7 @@
 	<table>
 	<tr>
 <td><a href="{{url('/workers/create')}}" class="btn btn-success">Create Worker</a></td>
-<td style="padding:0 875px 0 875px;"><a href="{{ URL::to('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel</button></a></td>
+<td style="padding:0 875px 0 875px;"><a href="{{ URL::to('downloadExcel/workers/xlsx') }}"><button class="btn btn-success">Download Excel</button></a></td>
 	</tr>
 	</table>
     <hr>

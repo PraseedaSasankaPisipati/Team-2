@@ -10,7 +10,7 @@
    <td> <a href="{{url('/workorders/create')}}" class="btn btn-success">Create Work Order</a></td>
 @endif
     
-	<td style="padding:0 875px 0 875px;"><a href="{{ URL::to('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel</button></a> </td>
+	<td style="padding:0 875px 0 875px;"><a href="{{ URL::to('downloadExcel/workorders/xlsx') }}"><button class="btn btn-success">Download Excel</button></a> </td>
 	</tr></table>
     <hr>
     <table class="table table-striped table-bordered table-hover">

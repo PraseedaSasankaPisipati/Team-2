@@ -5,7 +5,8 @@ use App\Http\Requests;
 use App\Building;
 use App\Buildingmanager;
 use App\User;
-
+use DB;
+use Excel;
 class BuildingController extends Controller
 {
      public function index()
@@ -66,5 +67,17 @@ class BuildingController extends Controller
         Building::find($id)->delete();
         return redirect('buildings');
     }
+	
+	public function downloadExcel($type)
+	{
+		$data = Building::get()->toArray();
+		date_default_timezone_set("America/Chicago");
+		return Excel::create('Buildings -' . date("Y-m-d h:i:sa"), function($excel) use ($data) {
+			$excel->sheet('mySheet', function($sheet) use ($data)
+	        {
+				$sheet->fromArray($data);
+	        });
+		})->download($type);
+	}
 	
 }
