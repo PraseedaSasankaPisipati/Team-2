@@ -30,4 +30,4 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::get('downloadExcel/{type}', 'WorkorderController@downloadExcel');
-Route::get('downloadExcel/{type}', 'ComplaintController@downloadExcel');
+Route::get('downloadExcel', 'ComplaintController@downloadExcel');

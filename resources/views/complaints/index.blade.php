@@ -7,7 +7,7 @@
 	
 	<td><a href="{{url('/complaints/create')}}" class="btn btn-success">Create Complaint</a> </td>
 @endif
-	<td style="padding:0 1000px 0 1000px;"><a href="{{ URL::to('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel</button></a> </td>
+	<td style="padding:0 1000px 0 1000px;"><a href="{{ URL::to('downloadExcel') }}"><button class="btn btn-success">Download Excel</button></a> </td>
 	</tr></table>
 	<hr>
     <table class="table table-striped table-bordered table-hover">
@@ -17,9 +17,9 @@
             <th>Customer Name</th>
             <th>Customer Email</th>
             <th>Customer Mobile Phone</th>
-            <th>Cutomer Apt Phone</th>
-            <th>Cusomter Complaint</th>
-			<th>Cusomter Address</th>
+            <th>Customer Apt Phone</th>
+            <th>Customer Complaint</th>
+			<th>Customer Address</th>
             <th colspan="3">Actions</th>
         </tr>
         </thead>

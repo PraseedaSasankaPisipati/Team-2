@@ -67,7 +67,7 @@ class ComplaintController extends Controller
 	{
 		return view('importExport');
 	}
-	public function downloadExcel($type)
+	public function downloadExcel()
 	{
 		$data = Complaint::get()->toArray();
 		date_default_timezone_set("America/Chicago");
@@ -76,6 +76,6 @@ class ComplaintController extends Controller
 	        {
 				$sheet->fromArray($data);
 	        });
-		})->download($type);
+		})->download();
 	}
 }
