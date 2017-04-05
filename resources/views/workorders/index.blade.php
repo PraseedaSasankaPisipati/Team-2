@@ -36,7 +36,7 @@
 	
         @foreach ($workorders as $workorder)
             <tr>
-                <td>{{ $workorder->worker->id }}</td>
+                <td>{{ $workorder->worker->worker_name }}</td>
                 <td>{{ $workorder->complaint_id }}</td>
                 <td>{{ $workorder->worker_mobilephone }}</td>
                 <td>{{ $workorder->order_description }}</td>
