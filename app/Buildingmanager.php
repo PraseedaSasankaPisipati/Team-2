@@ -11,9 +11,6 @@ class Buildingmanager extends Model
         'buildingmanager_mobilephone',
 		'buildingmanager_email',
 ];
- public function building()
-    {
-        return $this->hasOne('App\Building');
-    }
+
 
 }

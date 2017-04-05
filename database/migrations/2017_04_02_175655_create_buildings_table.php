@@ -17,13 +17,9 @@ class CreateBuildingsTable extends Migration
 		$table->string('building_name');
         $table->string('building_address');
 		$table->integer('number_of_apartments');
-		$table->integer('buildingmanager_id')->unsigned();
+		
 		$table->timestamps();
 		});
-		
-		Schema::table('buildings', function (Blueprint $table) {
-           $table->foreign('buildingmanager_id')->references('id')->on('buildingmanagers')->onDelete('cascade');
-        });
 		
 		
     }

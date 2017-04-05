@@ -12,9 +12,6 @@ class Building extends Model
 
 		
 	 ];
-	 public function buildingmanager() {
-        return $this->belongsTo('App\Buildingmanager');
-    }
 	
 	 public function complaint() {
         return $this->hasMany('App\Complaint');
