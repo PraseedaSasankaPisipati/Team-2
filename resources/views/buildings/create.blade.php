@@ -19,6 +19,10 @@
         {!! Form::label('number_of_apartments', 'Number Of Apartments:') !!}
         {!! Form::text('number_of_apartments',null,['class'=>'form-control']) !!}
     </div> 
+	<div class="form-group">
+        {!! Form::label('number_of_apartments', 'Number Of Apartments:') !!}
+        {!! Form::text('number_of_apartments',null,['class'=>'form-control']) !!}
+    </div> 
     <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
     </div>

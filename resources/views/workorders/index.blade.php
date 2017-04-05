@@ -1,6 +1,5 @@
 @extends('app')
 @section('content')
-
 @if (Auth::user()->role!=='work')
  <h1>WorkOrder Details</h1>
 <table>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests;
 use App\Workorder;
 use App\Worker;
 use App\Complaint;
@@ -24,6 +25,7 @@ class WorkorderController extends Controller
 	
 	public function show($id)
     {
+		
         $workorder = Workorder::findOrFail($id);
 		
 		return view('workorders.show',compact('workorder'));
@@ -32,6 +34,7 @@ class WorkorderController extends Controller
 	
 	public function create()
     {
+		
 		$workers = Worker::lists('worker_name','id');
 		$complaints = Complaint::lists('id','id');
 		 if(count($workers) > 0 && count($complaints) >0){
@@ -53,7 +56,9 @@ class WorkorderController extends Controller
 	
 	public function store(Request $request)   
     {
+	
        $workorder= new Workorder($request->all());
+	   
        $workorder->save();
               return redirect('workorders');
     }
@@ -71,7 +76,7 @@ class WorkorderController extends Controller
 	
 	public function update($id,Request $request)
     {
-        //
+     
         $workorder= new Workorder($request->all());
         $workorder=Workorder::find($id);
         $workorder->update($request->all());

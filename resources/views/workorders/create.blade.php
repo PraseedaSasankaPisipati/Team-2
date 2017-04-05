@@ -8,7 +8,7 @@
     </div>
 	<h4> <b> Complaint Id</h4>
 	<div class="form-group">
-        {!! Form::select('id', $complaints) !!}          
+        {!! Form::select('complaint_id', $complaints) !!}          
 
     </div>
     <div class="form-group">
