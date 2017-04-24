@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
- <h1>Add New Building</h1>
+ <h1>Add New Building Manager</h1>
   {!! Form::open(['url' => 'buildingmanagers']) !!}
   <div class="form-group">
         {!! Form::label('buildingmanager_name', 'Building Manager Name:') !!}

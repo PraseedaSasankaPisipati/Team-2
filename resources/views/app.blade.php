@@ -35,23 +35,77 @@ a:active {
 </head>
 @if (Auth::user())
 <body>
+
 <div class="container" align= "center" >
-<div class=col-md><img src="./Images/mercy-housing-logo.png" alt="Mercy housing" onerror="this.style.display='none'"></div>
- <br><br>
+
 @if (Auth::user()->role==='work')
-   <a href="{{ action('WorkorderController@index') }}">Work Orders</a> |
-	<a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+			<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+	  <img height="50" Width="130" src="./Images/mercy-housing-logo.png" alt="Mercy housing" onerror="this.style.display='none'">
+    </div>
+    <ul class="nav navbar-nav">
+   <li><a href="{{ action('WorkorderController@index') }}">Work Orders</a> </li>
+	<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+	 </ul>
+  </div>
+</nav>
 @elseif (Auth::user()->role==='pman')
-	<a href="{{ action('BuildingController@index') }}">Buildings</a> |
-		<a href="{{ action('PropertyController@index') }}">Properties</a> |
-		 <a href="{{ action('ComplaintController@index') }}">Complaints</a> |
-	<a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+	  <img height="50" Width="130" src="./Images/mercy-housing-logo.png" alt="Mercy housing" onerror="this.style.display='none'">
+    </div>
+    <ul class="nav navbar-nav">
+<li>	<a href="{{ action('PropertyController@index') }}">Properties</a> </li>
+	<li><a href="{{ action('BuildingController@index') }}">Buildings</a> </li>
+	<li>	<a href="{{ action('BuildingmanagerController@index') }}">Building Managers</a> </li>
+		<li> <a href="{{ action('ComplaintController@index') }}">Complaints</a> </li>
+		  <li><a href="{{ action('WorkorderController@index') }}">Work Orders</a></li>
+    <li><a href="{{ action('WorkerController@index') }}">Workers</a></li>
+	<li> <a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
+	 </ul>
+  </div>
+</nav>
+	@elseif (Auth::user()->role==='bman')
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+	  <img height="50" Width="130" src="./Images/mercy-housing-logo.png" alt="Mercy housing" onerror="this.style.display='none'">
+    </div>
+    <ul class="nav navbar-nav">
+	<li><a href="{{ action('BuildingController@index') }}">Buildings</a></li>
+    <li><a href="{{ action('ComplaintController@index') }}">Complaints</a></li>
+    <li><a href="{{ action('WorkorderController@index') }}">Work Orders</a></li>
+    <li><a href="{{ action('WorkerController@index') }}">Workers</a></li>
+	<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
+	 </ul>
+  </div>
+</nav>
 @else
-	<a href="{{ action('BuildingController@index') }}">Buildings</a> |
-    <a href="{{ action('ComplaintController@index') }}">Complaints</a> |
-    <a href="{{ action('WorkorderController@index') }}">Work Orders</a> |
-    <a href="{{ action('WorkerController@index') }}">Workers</a> |
-	<a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+	  <img height="50" Width="130" src="./Images/mercy-housing-logo.png" alt="Mercy housing" onerror="this.style.display='none'">
+    </div>
+    <ul class="nav navbar-nav">
+<li><a href="{{ action('UserController@index') }}">User</a> </li>
+	<li><a href="{{ action('PropertyController@index') }}">Properties</a></li>
+	<li><a href="{{ action('PropertymanagerController@index') }}">Property Managers</a></li>
+	<li><a href="{{ action('BuildingController@index') }}">Buildings</a></li>
+	<li><a href="{{ action('BuildingmanagerController@index') }}">Building Managers</a></li>
+    <li><a href="{{ action('ComplaintController@index') }}">Complaints</a> </li>
+    <li><a href="{{ action('WorkorderController@index') }}">Work Orders</a> </li>
+    <li><a href="{{ action('WorkerController@index') }}">Workers</a> </li>
+	<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+    </ul>
+  </div>
+</nav>
+	
 @endif
 </div>
 <div class="container">

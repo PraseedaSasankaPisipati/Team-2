@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::resource('complaints','ComplaintController');
 Route::resource('workorders','WorkorderController');
 Route::resource('workers','WorkerController');
-//Route::resource('user','UserController');
+Route::resource('users','UserController');
 //Route::resource('admin','AdminController');
 Route::resource('buildings','BuildingController');
 Route::resource('properties','PropertyController');
@@ -34,4 +34,7 @@ Route::get('downloadExcel/complaints/{type}', 'ComplaintController@downloadExcel
 Route::get('downloadExcel/buildings/{type}', 'BuildingController@downloadExcel');
 Route::get('downloadExcel/workers/{type}', 'WorkerController@downloadExcel');
 Route::get('downloadExcel/properties/{type}', 'PropertyController@downloadExcel');
+Route::get('downloadExcel/users/{type}', 'UserController@downloadExcel');
+Route::get('downloadExcel/buildingmanagers/{type}', 'BuildingmanagerController@downloadExcel');
+Route::get('downloadExcel/propertymanagers/{type}', 'PropertymanagerController@downloadExcel');
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Worker;
+use App\User;
 
 use DB;
 use Excel;
@@ -29,6 +30,7 @@ class WorkerController extends Controller
 	
 	public function create()
     {
+		
         return view('workers.create');
     }
 	
@@ -36,6 +38,12 @@ class WorkerController extends Controller
     {
        $worker = new Worker($request->all());
        $worker->save();
+	   User::create([
+            'name' => $request['worker_name'],
+            'email' => $request['worker_name'].'@mercy.com',
+            'password' => bcrypt('123456'),
+            'role'=>"work",
+        ]);
        return redirect('workers');
     }
 	

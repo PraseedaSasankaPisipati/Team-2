@@ -2,6 +2,8 @@
 namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Buildingmanager;
+use App\Propertymanager;
+use App\Worker;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -30,7 +32,7 @@ class AuthController extends Controller
        if($user->role === 'admin') 
        {
           //  if($user->roleid===4){
-          //  return redirect()->intended('/admin');
+           return redirect()->intended('/users');
         echo "Admin Underconstruction!";
     }
         
@@ -82,11 +84,33 @@ class AuthController extends Controller
     protected function create(array $data)
     {
 		
-        return User::create([
+       
+		if($data['role'] === 'bman'){
+			//echo "Building $$$$$$$$$$$$$$$$$$$$$$$$ Manager";
+			 Buildingmanager::create([
+            'buildingmanager_name' => $data['name'],
+            'buildingmanager_email' => $data['email'],
+            'buildingmanager_mobilephone' => "963852741",
+        ]);
+		}	else if ($data['role'] === 'pman'){
+				 Propertymanager::create([
+            'propertymanager_name' => $data['name'],
+            'propertymanager_email' => $data['email'],
+            'propertymanager_mobilephone' => "963852741",
+        ]);	
+		}else if($data['role'] === 'work'){
+			 Worker::create([
+            'worker_name' => $data['name'],
+            'worker_mobilephone' => "123456789",
+            'worker_skills' => "Skills",
+		]);
+		}
+		return  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'role'=>$data['role']
         ]);
+		
     }
 }

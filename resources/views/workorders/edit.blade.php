@@ -3,7 +3,7 @@
             
     <h1>Update Work Order</h1>
 	{!! Form::model($workorders,['method' => 'PATCH','route'=>['workorders.update',$workorders->id]]) !!}
-    @if (Auth::user()->role!=='work')
+ 
 	<h4><b> Workers </h4>
    <div class="form-group">
         {!! Form::select('worker_id', $workers) !!}          
@@ -37,7 +37,7 @@
         {!! Form::label('order_completion_date', 'Work Order Completion Date:') !!}
         {!! Form::text('order_completion_date',null,['class'=>'form-control']) !!}
     </div>
-    @endif
+
     <div class="form-group">
     {!! Form::select('order_status', [
    'Initiated' => 'Initiated',

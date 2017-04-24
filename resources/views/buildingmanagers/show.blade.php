@@ -11,7 +11,7 @@
             </tr>
 			<tr>
                 <td>Building Manager MobilePhone</td>
-                <td><?php echo ($buildingmanger['buildingmanager_mobilephone']); ?></td>
+                <td><?php echo ($buildingmanager['buildingmanager_mobilephone']); ?></td>
             </tr>
             <tr>
                 <td>Building Manager Email</td>

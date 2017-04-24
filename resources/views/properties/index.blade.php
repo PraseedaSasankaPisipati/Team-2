@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-
+<marquee behavior="scroll" direction="left"><h3>Welcome to Mercy Affordable Housing..!</h3></marquee>
     <h1>Property Details</h1>
 	<table>
 	<tr>

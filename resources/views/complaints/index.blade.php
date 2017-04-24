@@ -1,5 +1,6 @@
 @extends('app')
 @section('content')
+<marquee behavior="scroll" direction="left"><h3>Welcome to Mercy Affordable Housing..!</h3></marquee>
 <h1>Complaint Details</h1>
 @if (Auth::user()->role!=='pman')
    	<table>
