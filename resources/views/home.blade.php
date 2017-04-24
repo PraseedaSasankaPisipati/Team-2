@@ -21,11 +21,11 @@ Phone number <br>
 Credit/Debit Card Information <br> <br>
 
 <b>The Way We Use Information </b><br><br>
-We use the information you provide about yourself when making a gift to communicate with you about the work of Mercy Housing. Your personal data is always safe with us and we shall never sell any information you may choose to share with us. Your privacy will always be fully respected and you can easily opt-out of any further communication from us. Call us at (303) 830-3300 or write to us at mercyhousing@mercyhousing.org or at Mercy Housing, 1999 Broadway Suite 1000 Denver, CO 80202.  <br><br>
+We use the information you provide about yourself when making a gift to communicate with you about the work of Mercy Housing. Your personal data is always safe with us and we shall never sell any information you may choose to share with us. Your privacy will always be fully respected and you can easily opt-out of any further communication from us. Call us at (402) 637-0000 or write to us at mercyhousing@mercyhousing.org or at Mercy Housing, 1999 Broadway Suite 1000 Denver, CO 80202.  <br><br>
 
 We never use or share the personally identifiable information which you provide in ways unrelated to the ones described above without also providing you an opportunity to opt-out or otherwise prohibit such unrelated uses. <br><br>
 
-If you make a donation, we may list your name in communications unless otherwise requested. In particular, if you make a donation in honor/memory of an individual or organization, and you provide us with the required contact information, we will share your name and address with that honoree (or honoree contact) so that they may thank you, unless you request us not to. We never share individual donor gift information unless it is specifically requested by the donor. To do so, make a note with your gift or contact us at mercyhousing@mercyhousing.org or (303) 830-3300. We may share a total amount of tribute donations to the honoree or honoree contact if requested by that individual/organization AND the number of tribute gifts exceeds 10 gifts. <br><br>
+If you make a donation, we may list your name in communications unless otherwise requested. In particular, if you make a donation in honor/memory of an individual or organization, and you provide us with the required contact information, we will share your name and address with that honoree (or honoree contact) so that they may thank you, unless you request us not to. We never share individual donor gift information unless it is specifically requested by the donor. To do so, make a note with your gift or contact us at mercyhousing@mercyhousing.org or (402) 637-0000. We may share a total amount of tribute donations to the honoree or honoree contact if requested by that individual/organization AND the number of tribute gifts exceeds 10 gifts. <br><br>
 
 You can register with our website if you would like to receive our e-newsletter as well as updates on our current initiatives, event notifications and other relevant information. We use non-identifying and aggregate information to better design our website and properly display information to you. Our web servers record your Internet Protocol (IP) address and the pages you visit while at our site. We use this information for internal tracking purposes, to enhance your experience on our site, to respond to your requests, and to advise you of information about our work.<br><br>
 
@@ -45,10 +45,10 @@ Protecting the privacy of the very young is especially important. For that reaso
 You can correct factual errors in your personally identifiable information by sending us a request that credibly shows error to mercyhousing@mercyhousing.org. To protect your privacy and security, we will also take reasonable steps to verify your identity before granting access or making corrections.<br><br>
 
 <b>Opt-Out</b><br><br>
-Mercy Housing also offers an "opt-out" option at any time they wish to cease receiving emails or other information from our organization. If you initially decided to receive information from us, but at a later date wish to remove your information from our database, you can do so by sending an email to mercyhousing@mercyhousing.org or by calling us at (303) 830-3300. You can also opt out anytime by updating your preferences.<br><br>
+Mercy Housing also offers an "opt-out" option at any time they wish to cease receiving emails or other information from our organization. If you initially decided to receive information from us, but at a later date wish to remove your information from our database, you can do so by sending an email to mercyhousing@mercyhousing.org or by calling us at (402) 637-0000. You can also opt out anytime by updating your preferences.<br><br>
 
 <b>How To Contact Us</b><br><br>
-Should you have other questions or concerns about these privacy policies, please call us at (303) 830-3300 or send us an email at mercyhousing@mercyhousing.org. <br></p>
+Should you have other questions or concerns about these privacy policies, please call us at (402) 637-0000 or send us an email at mercyhousing@mercyhousing.org. <br></p>
                     
 					<div align="center"><a href="{{ url('/logout') }}"><i class="btn"></i>I Agree</a> </div>
                 </div>
