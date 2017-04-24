@@ -29,11 +29,12 @@
     </div>
 	<div class="form-group">
         {!! Form::label('order_date', 'Work Order Date:') !!}
-        {!! Form::text('order_date',null,['class'=>'form-control']) !!}
+		<input type="text" id="datepicker" name="order_date" class="form-control"> 
     </div>
 	<div class="form-group">
         {!! Form::label('order_completion_date', 'Work Order Completion Date:') !!}
-        {!! Form::text('order_completion_date',null,['class'=>'form-control']) !!}
+        <input type="text" id="datepicker2" name="order_completion_date" class="form-control"> 
+
     </div>
         <div class="form-group">
         {!! Form::label('order_status', 'Status:') !!}

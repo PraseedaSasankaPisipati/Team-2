@@ -30,7 +30,6 @@
             
             @if (Auth::user()->role!=='work' && Auth::user()->role!=='pman')
             <th colspan="3">Actions</th>
-		     <th>Update </th>
             @endif
         </tr>
         </thead>
@@ -48,9 +47,6 @@
 				<td>{{ $workorder->order_date }}</td>
 				<td>{{ $workorder->order_completion_date }}</td>
                 <td><a href="{{url('workorders',$workorder->id)}}" class="btn btn-primary">Track Status</a></td>
-                 @if (Auth::user()->role==='work')
-                <td><a href="{{route('workorders.edit',$workorder->id)}}" class="btn btn-warning">Update </a></td>
-                @endif
                  @if (Auth::user()->role!=='work' && Auth::user()->role!=='pman')                
                 <td><a href="{{route('workorders.edit',$workorder->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
