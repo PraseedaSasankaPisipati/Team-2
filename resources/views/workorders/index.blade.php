@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-<marquee behavior="scroll" direction="left"><h3>Welcome to Mercy Affordable Housing..!</h3></marquee>@if (Auth::user()->role!=='work')
+<marquee behavior="scroll" direction="left"><h3>Welcome to Mercy Affordable Housing..!</h3></marquee>@if (Auth::user()->role!=='work' && Auth::user()->role!=='pman')
 	
 
  <h1>WorkOrder Details</h1>
@@ -27,9 +27,10 @@
 			<th>Work Order Date</th>
 			<th>Work Order Completion Date</th>
             <th>Track Status</th>
-            <th>Update </th>
-            @if (Auth::user()->role!=='work')
+            
+            @if (Auth::user()->role!=='work' && Auth::user()->role!=='pman')
             <th colspan="3">Actions</th>
+		     <th>Update </th>
             @endif
         </tr>
         </thead>
@@ -50,7 +51,7 @@
                  @if (Auth::user()->role==='work')
                 <td><a href="{{route('workorders.edit',$workorder->id)}}" class="btn btn-warning">Update </a></td>
                 @endif
-                 @if (Auth::user()->role!=='work')                
+                 @if (Auth::user()->role!=='work' && Auth::user()->role!=='pman')                
                 <td><a href="{{route('workorders.edit',$workorder->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
                     {!! Form::open(['method' => 'DELETE', 'route'=>['workorders.destroy', $workorder->id]]) !!}

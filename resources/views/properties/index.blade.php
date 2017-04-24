@@ -26,12 +26,14 @@
                 <td>{{ $property->property_address }}</td>
                 <td>{{ $property->number_of_buildings }}</td>
                 <td><a href="{{url('properties',$property->id)}}" class="btn btn-primary">Read</a></td>
+					@if (Auth::user()->role!=='pman')
                 <td><a href="{{route('properties.edit',$property->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
                     {!! Form::open(['method' => 'DELETE', 'route'=>['properties.destroy', $property->id]]) !!}
 					{!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                 </td>
+				    @endif
             </tr>
         @endforeach
 
