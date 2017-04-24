@@ -17,13 +17,10 @@ class CreatePropertiesTable extends Migration
 		$table->string('property_name');
         $table->string('property_address');
 		$table->string('number_of_buildings');
-		$table->integer('propertymanager_id')->unsigned();
+		
 		$table->timestamps();
 		});
 		
-		Schema::table('properties', function (Blueprint $table) {
-           $table->foreign('propertymanager_id')->references('id')->on('propertymanagers')->onDelete('cascade');
-        });
     }
 
     /**
