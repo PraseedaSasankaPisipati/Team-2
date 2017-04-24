@@ -70,8 +70,7 @@
 						{{ Form::select('role', [
    'pman' => 'Property Manager',
    'bman' => 'Building Manager',
-   'work' => 'Worker',
-   'admin' => 'Admin'],['class' => 'form-control']
+   'work' => 'Worker'],['class' => 'form-control']
 ) }}
 						</div>
                         <div class="form-group">
